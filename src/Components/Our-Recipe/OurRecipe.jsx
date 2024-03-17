@@ -28,7 +28,7 @@ const OurRecipe = () => {
                 <p className="text-[#150B2B99] max-w-[820px] mx-auto sm:mb-8 mb-4 md:mb-12">There are millions of recipe that will give a different level test every single recipe. So find your favorite recipe from Yoummeology and enjoy test like Utopia Empire's Foods.</p>
             </div>
             <div className="flex gap-4 xl:gap-10 justify-between lg:flex-row flex-col">
-                <ReciepeRight handleWantToCook={handleWantToCook} ></ReciepeRight>
+                <ReciepeRight handleWantToCook={handleWantToCook}></ReciepeRight>
                 <RecipeLeft preparingRecipes={preparingRecipes} handlePreparing={handlePreparing} currentlyCooking = {currentlyCooking} totalMin={totalMin} totalCal = {totalCal}></RecipeLeft>
             </div>
         </div>

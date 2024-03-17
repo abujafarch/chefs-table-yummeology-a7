@@ -1,8 +1,8 @@
 import { IoTimeOutline } from "react-icons/io5";
+import { FaFire } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaFire } from "react-icons/fa";
-import { useState } from "react";
 const RecipeCard = ({recipe, handleWantToCook}) => {
     const [wantToCook, setWantToCook] = useState(true)
     return (
@@ -24,17 +24,19 @@ const RecipeCard = ({recipe, handleWantToCook}) => {
                 <p className="flex items-center gap-2"><IoTimeOutline></IoTimeOutline> {recipe.preparing_time} min</p>
                 <p className="flex items-center gap-2"><FaFire></FaFire> {recipe.calories} Calories</p>
             </div>
-            <button onClick={()=>{
-                if(wantToCook === true){
-                    handleWantToCook(recipe)
-                    setWantToCook(false);
-                }
-                else if(wantToCook === false){
-                    toast('✔️ Already Added to Want to Cook')
-                }
+            <div>
+                <button onClick={()=>{
+                    if(wantToCook === true){
+                        handleWantToCook(recipe)
+                        setWantToCook(false);
+                    }
+                    else if(wantToCook === false){
+                        toast('✔️ Already Added to Want to Cook')
+                    }
 
-            }} className="text-lg px-6 py-3 bg-[#0BE58A] rounded-[50px] font-medium text-[#150B2B]">Want to Cook</button>
-            <ToastContainer></ToastContainer>
+                }} className="text-lg px-6 py-3 bg-[#0BE58A] rounded-[50px] font-medium text-[#150B2B]">Want to Cook</button>
+                <ToastContainer></ToastContainer>
+            </div>    
         </div>
     );
 };
