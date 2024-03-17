@@ -1,4 +1,6 @@
 import { IoTimeOutline } from "react-icons/io5";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FaFire } from "react-icons/fa";
 import { useState } from "react";
 const RecipeCard = ({recipe, handleWantToCook}) => {
@@ -27,7 +29,12 @@ const RecipeCard = ({recipe, handleWantToCook}) => {
                     handleWantToCook(recipe)
                     setWantToCook(false);
                 }
+                else{
+                    toast('✔️ Already Added to Want to Cook')
+                }
+
             }} className="text-lg px-6 py-3 bg-[#0BE58A] rounded-[50px] font-medium text-[#150B2B]">Want to Cook</button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
