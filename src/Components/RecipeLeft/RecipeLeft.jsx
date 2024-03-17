@@ -10,11 +10,11 @@ const RecipeLeft = ({preparingRecipes, handlePreparing, currentlyCooking, totalM
             <div className="w-full">
                 <table className="w-full text-left text-[#878787] font-fira">
                     <tr className="font-light">
-                        <th className="p-1 sm:p-2 sm:text-base text-[10px] font-medium w-[2%]"> </th>
-                        <th className="p-1 sm:p-2 sm:text-base text-[10px] font-medium w-[40%]">Name</th>
-                        <th className="p-1 sm:p-2 sm:text-base text-[10px] font-medium">Time</th>
-                        <th className="p-1 sm:p-2 sm:text-base text-[10px] font-medium">Calories</th>
-                        <th className="p-1 sm:p-2 sm:text-base text-[10px] font-medium"></th>
+                        <th className="p-1 sm:p-2 sm:text-base text-xs font-medium w-[2%]"> </th>
+                        <th className="p-1 sm:p-2 sm:text-base text-xs font-medium w-[40%]">Name</th>
+                        <th className="p-1 sm:p-2 sm:text-base text-xs font-medium">Time</th>
+                        <th className="p-1 sm:p-2 sm:text-base text-xs font-medium">Calories</th>
+                        <th className="p-1 sm:p-2 sm:text-base text-xs font-medium"></th>
                     </tr>
                     {
                         preparingRecipes.map((recipe,indx) => <RecipePreparing key={indx} slNumber={indx} recipe={recipe} handlePreparing = {handlePreparing}></RecipePreparing>)
@@ -25,20 +25,20 @@ const RecipeLeft = ({preparingRecipes, handlePreparing, currentlyCooking, totalM
                 <hr className="mb-6"/>
                 <table className="w-full text-left text-[#878787] font-fira">
                     <tr className="font-light">
-                        <th className=" p-1 sm:p-2 sm:text-base text-[10px] font-medium w-[2%]"> </th>
-                        <th className=" p-1 sm:p-2 sm:text-base text-[10px] font-medium w-[46%]">Name</th>
-                        <th className=" p-1 sm:p-2 sm:text-base text-[10px] font-medium">Calories</th>
-                        <th className=" p-1 sm:p-2 sm:text-base text-[10px] font-medium">Time</th>
+                        <th className=" p-1 sm:p-2 sm:text-base text-xs font-medium w-[2%]"> </th>
+                        <th className=" p-1 sm:p-2 sm:text-base text-xs font-medium w-[46%]">Name</th>
+                        <th className=" p-1 sm:p-2 sm:text-base text-xs font-medium">Calories</th>
+                        <th className=" p-1 sm:p-2 sm:text-base text-xs font-medium">Time</th>
                     </tr>
                     {
                         currentlyCooking.map((recipe, indx) => <RecipeCooking key={indx} slNumber = {indx + 1} recipe ={recipe}></RecipeCooking>)
                     }
                     {/* <TotalMinCal currentlyCooking = {currentlyCooking}></TotalMinCal> */}
                     <tr className="text-[#282828CC] font-medium">
-                        <td className=" p-1 sm:p-2 sm:text-sm text-[10px]"></td>
-                        <td className=" p-1 sm:p-2 sm:text-sm text-[10px]"></td>
-                        <td className=" p-1 sm:p-2 sm:text-sm text-[10px] text-sm">Total Time = <br/> {totalMin} min</td>
-                        <td className=" p-1 sm:p-2 sm:text-sm text-[10px] text-sm">Total calories = <br/>{totalCal} cal </td>
+                        <td className=" p-1 sm:p-2 sm:text-sm text-xs"></td>
+                        <td className=" p-1 sm:p-2 sm:text-sm text-xs"></td>
+                        <td className=" p-1 sm:p-2 sm:text-sm text-xs">Total Time = <br/> {totalMin} min</td>
+                        <td className=" p-1 sm:p-2 sm:text-sm text-xs">Total calories = <br/>{totalCal} cal </td>
                     </tr>
                 </table>
             </div>
