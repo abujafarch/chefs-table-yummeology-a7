@@ -29,7 +29,7 @@ const RecipeCard = ({recipe, handleWantToCook}) => {
                     handleWantToCook(recipe)
                     setWantToCook(false);
                 }
-                else{
+                else if(wantToCook === false){
                     toast('✔️ Already Added to Want to Cook')
                 }
 
